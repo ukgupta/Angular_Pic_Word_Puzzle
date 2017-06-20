@@ -1,0 +1,38 @@
+<header class="row" style="background: #202128">
+     <h1 class="text-strong" style="color: #f4f6f7">Level {{pw.currentLevel}}</h1>
+</header>
+<br/><br/>
+<div class="row">
+      <!-- <img ng-repeat="levelPic in pw.levelPics" class= "col-md-6" ng-src={{levelPic}} style = "width: 150px; height: 150px;">  -->
+        <table> 
+            <tr>
+                <td><img ng-src={{pw.levelPics[0]}}></td>
+                <td><img ng-src={{pw.levelPics[1]}}></td>
+            </tr>
+            <tr>
+                <td><img ng-src={{pw.levelPics[2]}}></td>
+                <td><img ng-src={{pw.levelPics[3]}}></td>
+            </tr>
+        </table>
+</div>
+
+<ul class="words-wrapper">
+    <li class="words-item answer-box" ng-repeat="item in pw.initAnswerLength track by $index">
+        <button class="btn btn-default" ng-click="pw.removeLetterFromAnswerBox($index, pw.answerGuess[$index])">
+                <span>{{pw.answerGuess[$index]}}</span>
+        </button>
+    </li>
+
+</ul>
+
+<ul class="words-wrapper">
+  <li class="words-item hint-box" ng-repeat="hint in pw.hintBoxes track by $index">
+    <button class="btn btn-default" ng-click="pw.addLetterToAnswerBox($index, hint)">
+        <span>{{hint}}</span>
+    </button>
+  </li>
+</ul>
+
+</br>
+</br>
+
