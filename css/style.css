@@ -11,7 +11,7 @@ li{
 	list-style: none;
 }
 body {
-    
+    background-image: url('/img/bg.jpg');
 }
 
 /* Layout
@@ -21,12 +21,12 @@ body {
 	min-height: 40px;
 }
 
-.container {
+/*.container {
     border: 5px solid #2F4F4F;
     box-shadow:0 0 10px gray;
     background:#708090; 
     background-image: url('/img/bg.jpg');  
-}
+}*/
 
 img {
 	border: 100px solid #006400;
